@@ -1,18 +1,23 @@
 ﻿using UnityEngine;
 using UnityStandardAssets.Network;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Networking;
 
 public class NetworkLobbyHook : LobbyHook
 {
-    public override void OnLobbyServerSceneLoadedForPlayer(NetworkManager manager, GameObject lobbyPlayer, GameObject gamePlayer)
+    public override void OnLobbyServerSceneLoadedForPlayer(NetworkManager manager, GameObject lobbyPlayer, GameObject playerBarista)
     {
         LobbyPlayer lobby = lobbyPlayer.GetComponent<LobbyPlayer>();
-        //NetworkSpaceship spaceship = gamePlayer.GetComponent<NetworkSpaceship>();
+        
+        Barista barista = playerBarista.GetComponent<Barista>();
 
-        //spaceship.name = lobby.name;
-        //spaceship.color = lobby.playerColor;
-        //spaceship.score = 0;
-        //spaceship.lifeCount = 3;
+        barista.PlayerName = lobby.playerName;
+        barista.baristaActions = GetPlayerActions();
+    }
+
+    private List<string> GetPlayerActions()
+    {
+        throw new System.NotImplementedException();
     }
 }
