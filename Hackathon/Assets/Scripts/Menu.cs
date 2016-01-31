@@ -17,9 +17,13 @@ public class Menu : MonoBehaviour {
         //GUI.Button(new Rect(Screen.width * .5f, Screen.height * 0.5f, Screen.width * .5f, Screen.height * .1f), "Plays");
     }
 
-    public void LoadScene()
+    public void GotoLobby()
     {
-        SceneManager.LoadScene("Profile");
+        SceneManager.LoadScene("Lobby");
+    }
+    public void GotoMain()
+    {
+        SceneManager.LoadScene("Main");
     }
 
 }
