@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Text;
+using System.Threading;
+using UnityStandardAssets.Network;
 
 namespace Assets
 {
@@ -13,10 +15,24 @@ namespace Assets
 
         private readonly Random rng = new Random();
 
-        public OrderManager()
+        public readonly List<Barista> players;
+        
+        public OrderManager(List<Barista> players)
         {
             InitIngredients();
             InitDrinks();
+
+            this.players = players;
+
+            var orderAssignmentTimer = new Timer(AssignNewOrders, null, TimeSpan.FromSeconds(1), TimeSpan.FromSeconds(1));
+        }
+
+        private void AssignNewOrders(object state)
+        {
+            foreach (var player in players)
+            {
+                player.AssignOrder(GetNewOrder(100));
+            }
         }
         
         public FufilledOrder GetNewOrder(int difficultyLevel)

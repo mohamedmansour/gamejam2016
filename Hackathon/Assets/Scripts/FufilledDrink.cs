@@ -21,5 +21,10 @@ namespace Assets
             this.fufilledIngredients = fufilledIngredients;
             this.difficulty = difficulty;
         }
+
+        public void AddIngredientToDrink(string ingredientName, int state)
+        {
+            fufilledIngredients.First(i => i.Name == ingredientName).FufillmentState = state;
+        }
     }
 }
