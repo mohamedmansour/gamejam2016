@@ -13,8 +13,7 @@ public class Barista : NetworkBehaviour
 
     public FufilledOrder currentOrder;
 
-    [SyncVar]
-    public List<string> availableActions = new List<string> { "Steam", "Grind", "" };
+    public SyncList<string> availableActions = new SyncListString {"This", "is", "test", "actions"};
 
     public Barista(string playerName, List<string> baristaActions)
     {
