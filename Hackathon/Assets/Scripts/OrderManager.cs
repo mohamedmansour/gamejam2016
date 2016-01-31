@@ -10,8 +10,8 @@ namespace Assets
 {
     class OrderManager
     {
-        private Dictionary<string ,Func<FufilledDrink>> drinks;
-        private Dictionary<string, Func<FufilledIngredient>> ingredients;
+        private Dictionary<string ,Func<FufilledDrink>> drinks = new Dictionary<string, Func<FufilledDrink>>();
+        private Dictionary<string, Func<FufilledIngredient>> ingredients = new Dictionary<string, Func<FufilledIngredient>>();
 
         private readonly Random rng = new Random();
 

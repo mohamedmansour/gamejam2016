@@ -12,13 +12,13 @@ public class Main : MonoBehaviour {
 
     void OnGUI()
     {
-
     }
 
 	// Use this for initialization
-	void Start () {
-	
-	}
+	void Start ()
+    {
+            orderText.text = "Change Me";
+    }
 	
 	// Update is called once per frame
 	void Update () {
