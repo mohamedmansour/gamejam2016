@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine.Networking;
 
 namespace Assets
 {
-    public class FufilledIngredient
+    public class FufilledIngredient : NetworkBehaviour
     {
         private readonly int fufillmentCriteria;
         public string Name { get; private set; }

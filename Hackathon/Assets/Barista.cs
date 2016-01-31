@@ -16,7 +16,7 @@ public class Barista : NetworkBehaviour
     public Barista(string playerName, List<string> baristaActions)
     {
         PlayerName = playerName;
-        baristaActions = baristaActions;
+        this.baristaActions = baristaActions;
     }
 
     public void AssignOrder(FufilledOrder newOrder)
@@ -25,8 +25,8 @@ public class Barista : NetworkBehaviour
     }
 
     [Command]
-    public void CmdSendIngredientToOrder(FufilledOrder targetOrder, string ingredientName, int state)
+    public void CmdSendIngredientToOrder(string ingredientName, int state)
     {
-        targetOrder.fufilledDrinks.First(d => !d.IsFufilled).AddIngredientToDrink(ingredientName, state);
+        currentOrder.fufilledDrinks.First(d => !d.IsFufilled).AddIngredientToDrink(ingredientName, state);
     }
 }

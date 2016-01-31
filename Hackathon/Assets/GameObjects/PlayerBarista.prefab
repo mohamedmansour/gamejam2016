@@ -8,7 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 490824}
-  - 114: {fileID: 11448200}
+  - 114: {fileID: 11483870}
   m_Layer: 0
   m_Name: PlayerBarista
   m_TagString: Untagged
@@ -28,7 +28,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11448200
+--- !u!114 &11483870
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -36,7 +36,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 114954}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ac1389725fdb33344b9cb1986d14dc21, type: 3}
+  m_Script: {fileID: 11500000, guid: ee266dd1a7651e44e8b69d94a8a23c41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &100100000

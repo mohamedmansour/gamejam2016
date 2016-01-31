@@ -4,11 +4,12 @@ using System.Linq;
 using System.Runtime.Remoting.Channels;
 using System.Text;
 using System.Threading;
+using UnityEngine.Networking;
 using UnityStandardAssets.Network;
 
 namespace Assets
 {
-    class OrderManager
+    class OrderManager : NetworkBehaviour
     {
         private Dictionary<string ,Func<FufilledDrink>> drinks;
         private Dictionary<string, Func<FufilledIngredient>> ingredients;

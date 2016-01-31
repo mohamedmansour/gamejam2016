@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using UnityEngine.Networking;
 
 namespace Assets
 {
-    public class FufilledDrink
+    public class FufilledDrink : NetworkBehaviour
     {
         private List<FufilledIngredient> fufilledIngredients;
 
